@@ -1,0 +1,151 @@
+[software] {
+    --accent-color: #d54420;
+    --accent-gradient-color: #d544204c;
+    --accent-gradient-color-hover: #d5442099
+}
+
+[books] {
+    --accent-color: #2060d4;
+    --accent-gradient-color: #2060d44c;
+    --accent-gradient-color-hover: #2060d499
+}
+
+[video-courses] {
+    --accent-color: #208076;
+    --accent-gradient-color: #2080764c;
+    --accent-gradient-color-hover: #20807699
+}
+
+[games] {
+    --accent-color: #01b0ec;
+    --accent-gradient-color: #01b0ec4c;
+    --accent-gradient-color-hover: #01b0ec99
+}
+
+[graphics] {
+    --accent-color: #08c6c4;
+    --accent-gradient-color: #08c6c44c;
+    --accent-gradient-color-hover: #08c6c499
+}
+
+[music] {
+    --accent-color: #a8c001;
+    --accent-gradient-color: #a8c0014c;
+    --accent-gradient-color-hover: #a8c00199
+}
+
+[movies] {
+    --accent-color: #be21d5;
+    --accent-gradient-color: #be21d54c;
+    --accent-gradient-color-hover: #be21d599
+}
+
+[tv] {
+    --accent-color: #d7c208;
+    --accent-gradient-color: #d7c2084c;
+    --accent-gradient-color-hover: #d7c20899
+}
+
+[xxx] {
+    --accent-color: #ff79d8;
+    --accent-gradient-color: #ff79d84c;
+    --accent-gradient-color-hover: #ff79d899
+}
+
+* {
+    --fz-min-px: calc(var(--fz-min)*1px);
+    --fz-max-px: calc(var(--fz-max)*1px);
+    --fz-diff: calc(var(--fz-max) - var(--fz-min));
+    font-size: clamp(var(--fz-min-px),var(--fz-min-px) + var(--fz-diff) * (100vw - 320px)/960,var(--fz-max-px))
+}
+
+/* * {
+    --accent-color: #e86f2d;
+    --accent-gradient-color: #e86f2d4c;
+    --accent-gradient-color-hover: #e86f2d99;            
+} */
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    outline: none;
+    padding: 0
+}
+
+.pretty-button {
+    align-items: flex-start;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: flex-start;
+    line-height: 31px;
+    padding: 14px 30px;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    z-index: 0
+}
+
+.pretty-button:after,
+.pretty-button:before {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1
+}
+
+.pretty-button:before {
+    background: var(--accent-color);
+    opacity: .3
+}
+
+.pretty-button.minimized-comments-block:before {
+    opacity: 1
+}
+
+.pretty-button.tertiary:before {
+    -webkit-clip-path: polygon(22px 0, 100% 5px, 100% calc(100% - 6px), 0 100%);
+    clip-path: polygon(22px 0, 100% 5px, 100% calc(100% - 6px), 0 100%);
+    transition: -webkit-clip-path .3s;
+    transition: clip-path .3s;
+    transition: clip-path .3s, -webkit-clip-path .3s
+}
+
+.pretty-button.tertiary:hover:before {
+    -webkit-clip-path: polygon(11px 7px, calc(100% - 23px) 0, 100% 100%, 0 calc(100% - 4px));
+    clip-path: polygon(11px 7px, calc(100% - 23px) 0, 100% 100%, 0 calc(100% - 4px))
+}
+
+.pretty-button span {
+    font-weight: 600
+}
+
+.pretty-button+.grateful_users {
+    margin-top: 1.1em
+}
+
+.pretty-button.submit-post {
+    color: #fff;
+    font-size: 22px;
+    line-height: 25px;
+    padding: 18px 48px 22px
+}
+
+.pretty-button.submit-post:before {
+    opacity: 1
+}
+
+.pretty-button-inner {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
